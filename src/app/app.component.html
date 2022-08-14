@@ -1,0 +1,13 @@
+<app-header-component></app-header-component>
+<div>
+  <app-dropdown></app-dropdown>
+</div>
+<div 
+class="paginationStyle">
+  <app-pagination
+  [maxValue]="maxVal"
+  [bigTotalItems]="this.items"
+  [bigCurrentPage]="this.pageData"
+></app-pagination>
+</div>
+

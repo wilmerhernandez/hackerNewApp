@@ -10,9 +10,10 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DropdownComponent } from './components/dropdown/dropdown.component';
 import { FilterComponent } from './components/filter/filter.component';
+import { CardListComponent } from './components/card-list/card-list.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponentComponent, PaginationComponent, DropdownComponent, FilterComponent],
+  declarations: [AppComponent, HeaderComponentComponent, PaginationComponent, DropdownComponent, FilterComponent, CardListComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

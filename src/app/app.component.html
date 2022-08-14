@@ -1,8 +1,9 @@
 <app-header-component></app-header-component>
 <app-filter></app-filter>
 <div>
-  <app-dropdown></app-dropdown>
+  <app-dropdown (click)="changeData()"></app-dropdown>
 </div>
+<app-card-list [data]="dataCards"></app-card-list>
 <div 
 class="paginationStyle">
   <app-pagination

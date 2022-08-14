@@ -1,0 +1,83 @@
+.container {
+    display: flex;
+    width: 70%;
+    margin: 38px 40px 30px 100px;
+    padding: 0 0 0 26px;
+    opacity: 0.8;
+  }
+
+  .cards {
+    display: flex;
+    width: 50%;
+    height: 90px;
+    margin: 38px 0px 30px 30px;
+    padding: 0 0 0 26px;
+    opacity: 0.8;
+    border-radius: 6px;
+    border: solid 1px #979797;
+    background-color: #fff;
+  }
+
+
+  .Yes-React-is-taking {
+    width: 440px;
+    height: 40px;
+    margin: 6px 16px 14px 0;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: 0.25px;
+    color: #6b6b6b;
+  }
+
+  .-hours-ago-by-autho {
+    width: 107px;
+    height: 13px;
+    font-family: Roboto;
+    font-size: 11px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #767676;
+  }
+  .heart {
+    /* width: 68px; */
+    /* height: 90px; */
+    margin: 0 0 0 0px;
+    padding: 35px 22px 33px;
+    /* opacity: 0.06; */
+    border-radius: 6px;
+    border: solid 1px #606060;
+    background-color: #f8f9fa;
+  }
+  @media(max-width:960px){
+    .cards{
+        width: 100%;
+        height: 90px;
+        padding: 0 0 0 26px;
+        opacity: 0.8;
+        border-radius: 6px;
+        border: solid 1px #979797;
+        background-color: #fff;
+        display: flex;
+    }
+
+    .container {
+        display: block;
+        width: 100%;
+        margin: 38px 40px 30px 120px;
+        padding: 0 0 0 26px;
+        opacity: 0.8;
+      }
+      .heart {
+        margin-left: auto;
+        border-radius: 6px;
+        border: solid 1px #606060;
+        background-color: #f8f9fa;
+      }
+  }

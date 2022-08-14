@@ -1,0 +1,83 @@
+.position {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.My-faves {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.75;
+  letter-spacing: normal;
+  text-align: center;
+  color: #606060;
+}
+
+.Rectangle2 {
+  padding: 3px 39px 0 40px;
+  border-radius: 2px;
+  border: solid 1px #d6d6d6;
+}
+
+.My-faves2 {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.75;
+  letter-spacing: normal;
+  text-align: center;
+  color: #1797ff;
+}
+
+.My-faves2:hover {
+  cursor: pointer;
+}
+
+.Rectangle1 {
+  padding: 3px 39px 0 40px;
+  border-radius: 2px;
+  border: solid 1px #1797ff;
+}
+
+.My-faves:hover {
+  cursor: pointer;
+}
+
+.Rectangle2:hover {
+  cursor: pointer;
+}
+
+#cars {
+    width: 240px;
+    margin: 63px 114px 1px 150px;
+    padding: 5px 12px 5px 12px;
+    border-radius: 4px;
+    border: solid 1px #2e2e2e;
+    background-color: #fff;
+    float: left;
+  }
+
+  .options {
+    width: 49px;
+    height: 22px;
+    padding-bottom: 40px;
+    margin: 0 0 65px 13px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.57;
+    letter-spacing: normal;
+    color: #343434;
+  }
+
+
+  @media(max-width: 360){
+    
+  }

@@ -4,21 +4,23 @@ import { languages } from 'src/assets/constants/constans';
 @Component({
   selector: 'app-dropdown',
   templateUrl: './dropdown.component.html',
-  styleUrls: ['./dropdown.component.css']
+  styleUrls: ['./dropdown.component.css'],
 })
 export class DropdownComponent implements OnInit {
-  language: { name: string; img: string; }[];
+  language: { name: string; img?: string }[];
+  dropTittle: { name: string; img?: string }[];
 
-  constructor() { 
+  constructor() {
     this.language = languages;
+    this.dropTittle = languages;
   }
 
-  ngOnInit(): void {
-    
-  }
+  ngOnInit(): void {}
 
-  setLanguage(langName:string){
-    console.log(langName)
+  setLanguage(langName: string) {
+    this.dropTittle = this.language.filter(
+      (element) => element.name === langName
+    );
+    console.log(langName);
   }
-
 }

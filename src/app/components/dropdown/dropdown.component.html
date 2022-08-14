@@ -6,7 +6,12 @@
     class="btn btn-default dropdown-toggle"
     aria-controls="dropdown-basic"
   >
-    <!--<img *ngIf="lang.img" [src]="'../../../assets/resources/img/'+lang.img" [alt]="'this is image about '+lang.name"> <a class="dropdown-item" href="#">Select your news</a> <span class="caret"></span>-->Select your news
+    <img
+      *ngIf="dropTittle[0].img"
+      [src]="'../../../assets/resources/img/' + dropTittle[0].img"
+      [alt]="'this is image about ' + dropTittle[0].name"
+    />
+    {{ dropTittle[0].name }}
   </button>
   <ul
     id="dropdown-basic"
@@ -15,6 +20,17 @@
     role="menu"
     aria-labelledby="button-basic"
   >
-    <li *ngFor="let lang of language" role="menuitem" (click)="setLanguage(lang.name)"> <img *ngIf="lang.img" [src]="'../../../assets/resources/img/'+lang.img" [alt]="'this is image about '+lang.name"> <a class="dropdown-item" href="#">{{lang.name}}</a></li>
+    <li
+      *ngFor="let lang of language"
+      role="menuitem"
+      (click)="setLanguage(lang.name)"
+    >
+      <img
+        *ngIf="lang.img"
+        [src]="'../../../assets/resources/img/' + lang.img"
+        [alt]="'this is image about ' + lang.name"
+      />
+      <a class="dropdown-item" href="#">{{ lang.name }}</a>
+    </li>
   </ul>
 </div>

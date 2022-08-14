@@ -6,7 +6,9 @@ import { Injectable } from '@angular/core';
 export class GlobalDataService {
   pageActual: string;
 
-  constructor() { }
+  constructor() {
+    this.pageActual = '1';
+   }
 
   get languages() {
     return localStorage.getItem('languages');

@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="position">
+      <div
+        *ngFor="let filter of filters"
+        [ngClass]="selectFaves == filter.number ? 'Rectangle1' : 'Rectangle2'"
+        (click)="clickFaves(filter.number)"
+      >
+        <span [ngClass]="selectFaves == filter.number ? 'My-faves2' : 'My-faves'"> {{filter.name}} </span>
+      </div>
+    </div>
+  </div>

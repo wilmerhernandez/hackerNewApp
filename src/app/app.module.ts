@@ -9,9 +9,10 @@ import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DropdownComponent } from './components/dropdown/dropdown.component';
+import { FilterComponent } from './components/filter/filter.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponentComponent, PaginationComponent, DropdownComponent],
+  declarations: [AppComponent, HeaderComponentComponent, PaginationComponent, DropdownComponent, FilterComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

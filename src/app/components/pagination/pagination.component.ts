@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { GlobalDataService } from 'src/app/services/global-data.service';
 
 @Component({
   // eslint-disable-next-line @angular-eslint/component-selector
@@ -12,7 +13,7 @@ export class PaginationComponent implements OnInit {
   maxSize: any;
   bigTotalItemsData: any;
   bigCurrentPageData: any;
-  constructor() {}
+  constructor(private globalService: GlobalDataService) {}
 
   ngOnInit(): void {
     this.maxSize = this.maxValue;
@@ -20,7 +21,7 @@ export class PaginationComponent implements OnInit {
     this.bigCurrentPageData = this.bigCurrentPage;
   }
 
-  pageNumber(){
-    console.log(this.bigCurrentPageData)
+  pageNumber() {
+    this.globalService.pageset = this.bigCurrentPageData;
   }
 }

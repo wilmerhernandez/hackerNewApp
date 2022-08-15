@@ -32,7 +32,6 @@ export class CardListComponent implements OnInit {
     } else {
       this.globalService.savedFaves?.push(author + '--' + tittle);
     }
-    console.log(this.globalService.savedFaves);
     localStorage.setItem(
       'savesFaces',
       this.globalService.savedFaves.toString()

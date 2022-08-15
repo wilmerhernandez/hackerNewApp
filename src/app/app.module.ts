@@ -11,7 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DropdownComponent } from './components/dropdown/dropdown.component';
 import { FilterComponent } from './components/filter/filter.component';
 import { CardListComponent } from './components/card-list/card-list.component';
-
+import { HttpClientModule } from '@angular/common/http'; // <-
 @NgModule({
   declarations: [AppComponent, HeaderComponentComponent, PaginationComponent, DropdownComponent, FilterComponent, CardListComponent],
   imports: [
@@ -21,6 +21,7 @@ import { CardListComponent } from './components/card-list/card-list.component';
     BsDropdownModule.forRoot(),
     BrowserAnimationsModule,
     FormsModule,
+    HttpClientModule 
   ],
   providers: [],
   bootstrap: [AppComponent],

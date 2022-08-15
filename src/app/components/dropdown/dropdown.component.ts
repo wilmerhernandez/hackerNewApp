@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GlobalDataService } from 'src/app/services/global-data.service';
+import { HttpService } from 'src/app/services/http.service';
 import { languages } from 'src/assets/constants/constans';
 
 @Component({
@@ -11,7 +12,7 @@ export class DropdownComponent implements OnInit {
   language: { name: string; img?: string }[];
   dropTittle: { name: string; img?: string }[];
 
-  constructor(private globalService: GlobalDataService) {
+  constructor(private globalService: GlobalDataService,private httpService:HttpService) {
     this.language = languages;
     this.dropTittle = languages;
   }
@@ -23,6 +24,5 @@ export class DropdownComponent implements OnInit {
     this.dropTittle = this.language.filter(
       (element) => element.name === langName
     );
-    console.log(langName);
   }
 }

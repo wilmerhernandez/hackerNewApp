@@ -4,9 +4,9 @@
   <app-dropdown (click)="changeData()"></app-dropdown>
 </div>
 <app-card-list [data]="dataCards"></app-card-list>
-<div 
-class="paginationStyle">
+<div>
   <app-pagination
+  (click)="changeData()"
   [maxValue]="maxVal"
   [bigTotalItems]="this.items"
   [bigCurrentPage]="this.pageData"

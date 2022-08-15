@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GlobalDataService } from 'src/app/services/global-data.service';
 import { filter } from 'src/assets/constants/constans';
 
 @Component({
@@ -10,7 +11,7 @@ export class FilterComponent implements OnInit {
   selectFaves: number;
   filters: { number: number; name: string; }[];
 
-  constructor() { 
+  constructor(private globalService:GlobalDataService) { 
     this.selectFaves = 1;
     this.filters = filter;
   }
@@ -24,6 +25,8 @@ export class FilterComponent implements OnInit {
    */
   clickFaves(data: number) {
     this.selectFaves = data;
+    this.globalService.selectFaves= this.selectFaves;
+
   }
 
 }

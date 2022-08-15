@@ -7,8 +7,9 @@ import { CardListService } from './card-list.service';
 export class GlobalDataService {
   pageActual: string;
   savedFaves: any[''];
-
+  selectFaves:any;
   constructor(private listCard: CardListService) {
+    this.selectFaves=1;
     this.pageActual = '1';
     this.savedFaves = localStorage.getItem('savesFaces')
       ? localStorage.getItem('savesFaces')?.split(',')

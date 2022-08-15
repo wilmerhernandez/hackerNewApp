@@ -18,6 +18,10 @@
     background-color: #fff;
   }
 
+  .cards-2 {
+    display: inline-flex;
+  }
+
   .cards:hover{
     border: solid 1px #979797;
   }

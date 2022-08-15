@@ -25,11 +25,11 @@ export class AppComponent implements OnInit {
   }
   /**
    * format data ago
-   * @param data 
-   * @returns 
+   * @param data
+   * @returns
    */
-  formatAgo(data:string){    
-    moment(data).format()
+  formatAgo(data: string) {
+    moment(data).format();
     return moment().startOf('hour').fromNow();
   }
 
@@ -44,6 +44,7 @@ export class AppComponent implements OnInit {
         story_title: element.story_title,
         story_url: element.story_url,
       }));
+
       this.dataCards = response;
     });
   }

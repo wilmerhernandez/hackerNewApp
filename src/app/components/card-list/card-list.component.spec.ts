@@ -36,4 +36,14 @@ describe('CardListComponent', () => {
   it('should favesHeart', () => {
     component.favesHeart('asdas','asdas');
   });
+
+
+  it('should showFaves', () => {
+    component.showFaves('asdas','asdas');
+  });
+  
+  it('should showFaves', () => {
+    component.selectFaves=2;
+    component.showFaves('asdas','asdas');
+  });
 });

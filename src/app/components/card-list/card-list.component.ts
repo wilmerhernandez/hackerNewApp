@@ -13,9 +13,12 @@ export class CardListComponent implements OnInit {
    * this var receives array Datacard for print cards in component
    */
   @Input() data: DataCard[] | null | undefined;
+  selectFaves: any;
   constructor(private globalService: GlobalDataService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.selectFaves=this.globalService.selectFaves;
+  }
 
 
   /**
@@ -51,5 +54,18 @@ export class CardListComponent implements OnInit {
     return (
       this.globalService.savedFaves.includes(author + '--' + tittle)
     );
+  }
+
+  showFaves(author: string, tittle: string){
+    this.selectFaves=this.globalService.selectFaves;
+    if(this.selectFaves==1){
+      return (
+        false
+      );
+    }else{
+      return (
+        !this.globalService.savedFaves.includes(author + '--' + tittle) 
+      );
+    }
   }
 }

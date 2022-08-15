@@ -7,7 +7,12 @@ import { Injectable } from '@angular/core';
 export class HttpService {
 
   constructor(private http:HttpClient) { }
-
+/**
+ * petition get
+ * @param url 
+ * @param path 
+ * @returns 
+ */
   request(url:string,path:string){
     return this.http.get<any>(url+path)
   }

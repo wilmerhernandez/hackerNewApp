@@ -7,11 +7,11 @@
     aria-controls="dropdown-basic"
   >
     <img
-      *ngIf="dropTittle[0].img"
-      [src]="'../../../assets/resources/img/' + dropTittle[0].img"
-      [alt]="'this is image about ' + dropTittle[0].name"
+      *ngIf="dropTittle[0]?.img"
+      [src]="'../../../assets/resources/img/' + dropTittle[0]?.img"
+      [alt]="'this is image about ' + dropTittle[0]?.name"
     />
-    {{ dropTittle[0].name }}
+    {{ dropTittle[0]?.name }}
   </button>
   <ul
     id="dropdown-basic"
@@ -26,11 +26,11 @@
       (click)="setLanguage(lang.name)"
     >
       <img
-        *ngIf="lang.img"
-        [src]="'../../../assets/resources/img/' + lang.img"
-        [alt]="'this is image about ' + lang.name"
+        *ngIf="lang?.img"
+        [src]="'../../../assets/resources/img/' + lang?.img"
+        [alt]="'this is image about ' + lang?.name"
       />
-      <a class="dropdown-item" href="#">{{ lang.name }}</a>
+      <a class="dropdown-item" href="#">{{ lang?.name }}</a>
     </li>
   </ul>
 </div>

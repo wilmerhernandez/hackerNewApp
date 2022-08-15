@@ -17,14 +17,25 @@ export class AppComponent implements OnInit {
   constructor(private globalService: GlobalDataService) {
     this.dataCards = [];
   }
-
+  /**
+   * load data
+   */
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    this.changeData();
   }
+  /**
+   * format data ago
+   * @param data 
+   * @returns 
+   */
   formatAgo(data:string){    
     moment(data).format()
     return moment().startOf('hour').fromNow();
   }
+
+  /**
+   * detect change in the components
+   */
   changeData() {
     this.globalService.loadCards.subscribe((data) => {
       const response: DataCard[] = data.hits.map((element: any) => ({

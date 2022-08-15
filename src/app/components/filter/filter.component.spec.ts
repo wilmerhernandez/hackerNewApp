@@ -22,4 +22,8 @@ describe('FilterComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should create', () => {
+    component.clickFaves(1);
+  });
 });

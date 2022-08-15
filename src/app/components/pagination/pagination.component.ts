@@ -7,6 +7,10 @@ import { GlobalDataService } from 'src/app/services/global-data.service';
   templateUrl: './pagination.html',
 })
 export class PaginationComponent implements OnInit {
+
+  /**
+   * inputs receive components for pagination
+   */
   @Input() maxValue: number | undefined;
   @Input() bigTotalItems: number | undefined;
   @Input() bigCurrentPage: number | undefined;
@@ -14,13 +18,17 @@ export class PaginationComponent implements OnInit {
   bigTotalItemsData: any;
   bigCurrentPageData: any;
   constructor(private globalService: GlobalDataService) {}
-
+/**
+ * inicialice data
+ */
   ngOnInit(): void {
     this.maxSize = this.maxValue;
     this.bigTotalItemsData = this.bigTotalItems;
     this.bigCurrentPageData = this.bigCurrentPage;
   }
-
+  /**
+   * set the number page in global data
+   */
   pageNumber() {
     this.globalService.pageset = this.bigCurrentPageData;
   }

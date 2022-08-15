@@ -8,11 +8,22 @@ import { GlobalDataService } from 'src/app/services/global-data.service';
   styleUrls: ['./card-list.component.css'],
 })
 export class CardListComponent implements OnInit {
+  /**
+   * input()
+   * this var receives array Datacard for print cards in component
+   */
   @Input() data: DataCard[] | null | undefined;
   constructor(private globalService: GlobalDataService) {}
 
   ngOnInit(): void {}
 
+
+  /**
+   * this method receives by param 
+   * @param author 
+   * @param tittle 
+   * and valid the news faves
+   */
   favesHeart(author: string, tittle: string) {
     if (this.globalService.savedFaves?.includes(author + '--' + tittle)) {
       this.globalService.savedFaves = this.globalService.savedFaves.filter(
@@ -28,6 +39,15 @@ export class CardListComponent implements OnInit {
     );
   }
 
+
+  /**
+   * this method receives by param 
+   * @param author 
+   * @param tittle 
+   * @returns true or false
+   * 
+   * returns true or false if savedFaves include data author and tittle
+   */
   isHeartFaves(author: string, tittle: string) {
     return (
       this.globalService.savedFaves.includes(author + '--' + tittle)

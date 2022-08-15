@@ -1,3 +1,4 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DropdownComponent } from './dropdown.component';
@@ -8,18 +9,25 @@ describe('DropdownComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DropdownComponent ]
-    })
-    .compileComponents();
+      declarations: [DropdownComponent],
+      imports: [HttpClientTestingModule],
+    }).compileComponents();
   });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(DropdownComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
+
+    component.dropTittle = [{ name: 'string', img: 'string' }];
+    component.language = [{ name: 'string', img: 'string' }];
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should setLanguage', () => {
+    component.setLanguage('Angular');
   });
 });

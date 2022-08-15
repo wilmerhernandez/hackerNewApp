@@ -17,7 +17,11 @@ export class FilterComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  /**
+   * this receive para data
+   * @param data 
+   * clickFaves filters between all and favorite news
+   */
   clickFaves(data: number) {
     this.selectFaves = data;
   }
